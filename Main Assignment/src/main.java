@@ -1,4 +1,3 @@
-
 public class main {
 	
 	/***
@@ -12,6 +11,12 @@ public class main {
 	public main(){
 		
 		// Default Constructor
+		
+	}
+	
+	public static void main (String [] args){
+		
+		new main(); // Main
 		
 	}
 
