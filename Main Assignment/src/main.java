@@ -8,5 +8,11 @@ public class main {
 	 * 
 	 * 
 	 ***/
+	
+	public main(){
+		
+		// Default Constructor
+		
+	}
 
 }
