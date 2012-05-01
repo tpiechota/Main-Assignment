@@ -1,5 +1,7 @@
 package Com.kylegoslin;
 
+import java.util.logging.Level;
+
 public class StartUp {
 	
 	// Variables
@@ -15,6 +17,13 @@ public class StartUp {
 		//Test to be removed when finished
 		System.out.println(className);
 		System.out.println(packageName);
+		
+		
+		// Set logger level and messages for each level
+		LogHandler.logger.setLevel(Level.ALL);
+		LogHandler.logger.severe("Severe Error Message");
+		LogHandler.logger.warning("Warning Message");
+		LogHandler.logger.info("Error Message");
 		
 	}
 	
