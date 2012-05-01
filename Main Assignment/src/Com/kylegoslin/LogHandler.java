@@ -3,6 +3,7 @@ package Com.kylegoslin;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
+import java.util.logging.XMLFormatter;
 
 
 public class LogHandler {
@@ -16,7 +17,7 @@ public class LogHandler {
 	
 	//Initialize Formaters
 	static private SimpleFormatter txtFormatter;
-	static private SimpleFormatter xmlFormatter;
+	static private XMLFormatter xmlFormatter;
 	
 	
 
