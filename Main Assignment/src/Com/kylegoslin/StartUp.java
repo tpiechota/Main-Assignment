@@ -1,5 +1,5 @@
 package Com.kylegoslin;
 
-public class StertUp {
+public class StartUp {
 
 }
