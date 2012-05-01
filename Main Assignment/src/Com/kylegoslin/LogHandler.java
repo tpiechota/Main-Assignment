@@ -9,8 +9,9 @@ public class LogHandler {
 	//Create logger
 	static Logger logger = Logger.getLogger("Com.kylegoslin");
 	
-	//Create FileHandler
-	static private FileHandler textFile; 
+	//Create FileHandlers
+	static private FileHandler txtFile;
+	static private FileHandler xmlFile;
 	
 	
 
