@@ -6,8 +6,8 @@ import java.util.logging.Level;
 public class StartUp {
 	
 	// Variables
-	static String className;
-	static String packageName;
+	private static String className;
+	private static String packageName;
 
 	// This method takes class name and package name from testing class
 	public static void config(String cn, String pn){
@@ -43,7 +43,7 @@ public class StartUp {
 	
 	
 	// Getters and Setters
-	public static String getClassName() {
+	public String getClassName() {
 		return className;
 	}
 
@@ -51,7 +51,7 @@ public class StartUp {
 		StartUp.className = className;
 	}
 
-	public static String getPackageName() {
+	public String getPackageName() {
 		return packageName;
 	}
 
