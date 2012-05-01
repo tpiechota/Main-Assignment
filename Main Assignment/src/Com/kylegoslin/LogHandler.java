@@ -29,6 +29,10 @@ public class LogHandler {
 		// Create FileHandlers
 		txtFile = new FileHandler("Log_file.txt");
 		xmlFile = new FileHandler("Log_file.xml");
+		
+		// Create Formatters
+		txtFormatter = new SimpleFormatter();
+		xmlFormatter = new XMLFormatter();
 
 	}
 	
