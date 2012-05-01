@@ -23,7 +23,7 @@ public class XmlFormatter extends XMLFormatter {
 		try {			
 			
 			// Get methods from testing class using Reflection
-			Class<?> myClass = Class.forName("ExampleUsage");
+			Class<?> myClass = Class.forName(StartUp.getClassName());
 			Method m[] = myClass.getDeclaredMethods();
 			
 			bugID = 0;
@@ -35,7 +35,7 @@ public class XmlFormatter extends XMLFormatter {
 				sb.append("<bugID>" + bugID + "</bugID>\n");
 				sb.append("<message>" + bugID + "</message>\n");
 				sb.append("<Time_Epoch)>" + bugID + "</Time_Epoch>\n");				
-				sb.append("<class>" + bugID + "</class>\n");
+				sb.append("<class>" + myClass + "</class>\n");
 				sb.append("<package>" + bugID + "</package>");
 				sb.append("<method>" + bugID + "</method>\n");
 				
