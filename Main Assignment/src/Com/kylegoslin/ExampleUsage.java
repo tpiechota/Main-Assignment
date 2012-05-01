@@ -17,7 +17,11 @@ public class ExampleUsage {
 		StartUp.config(this.getClass().getName().toString(), this.getClass().getPackage().getName().toString());
 		/*** Logger StartUp - END ***/
 		
+		dupa();
+		
 	}
+	
+	public void dupa(){}
 	
 	public static void main (String [] args){
 		
