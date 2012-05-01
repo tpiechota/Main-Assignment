@@ -4,9 +4,8 @@ public class ExampleUsage {
 	
 	/***
 	 * 
-	 * 
 	 * Author: Tomasz Piechota 
-	 * 
+	 * Project: Java - Semester 4 - Main Assignment
 	 * 
 	 ***/
 	
@@ -17,11 +16,15 @@ public class ExampleUsage {
 		StartUp.config(this.getClass().getName().toString(), this.getClass().getPackage().getName().toString());
 		/*** Logger StartUp - END ***/
 		
-		dupa();
+		exampleMethod();
 		
 	}
 	
-	public void dupa(){}
+	public void exampleMethod(){
+		
+		System.out.println("Hello World!");
+		
+	}
 	
 	public static void main (String [] args){
 		
