@@ -25,6 +25,11 @@ public class LogHandler {
 		
 		// Set logger level (global)
 		logger.setLevel(Level.INFO);
+		
+		// Create FileHandlers
+		txtFile = new FileHandler("Log_file.txt");
+		xmlFile = new FileHandler("Log_file.xml");
+
 	}
 	
 	
