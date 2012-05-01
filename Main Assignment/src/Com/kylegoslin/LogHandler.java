@@ -36,7 +36,7 @@ public class LogHandler {
 		timeNow = nowFormatter.format(nowEpoch);
 		
 		// Create FileHandlers
-		txtFile = new FileHandler("Log_" + timeNow + ".txt");
+		txtFile = new FileHandler("Logfhj_" + timeNow + ".txt");
 		xmlFile = new FileHandler("Log_" + timeNow + ".xml");
 		
 		// Create Formatters
@@ -51,7 +51,6 @@ public class LogHandler {
 		logger.addHandler(txtFile);
 		logger.addHandler(xmlFile);	
 		
-
 	}	
 
 }
