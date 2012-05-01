@@ -13,6 +13,11 @@ public class XmlFormatter extends XMLFormatter {
 	// Initialize bugID
 	private int bugID;
 	
+	// Create objects className and packageName
+	// This will allow dynamic access to testing class name and package name
+	StartUp className = new StartUp();
+	StartUp packageName = new StartUp();
+	
 	public String format(LogRecord record) {
 		
 		try {			
