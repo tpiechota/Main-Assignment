@@ -1,6 +1,8 @@
 package Com.kylegoslin;
 
+import java.io.IOException;
 import java.util.logging.FileHandler;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 import java.util.logging.XMLFormatter;
@@ -15,9 +17,15 @@ public class LogHandler {
 	static private FileHandler txtFile;
 	static private FileHandler xmlFile;
 	
-	//Initialize Formaters
+	//Initialize Formatters
 	static private SimpleFormatter txtFormatter;
 	static private XMLFormatter xmlFormatter;
+	
+	static public void Configure() throws IOException {
+		
+		// Set logger level (global)
+		logger.setLevel(Level.INFO);
+	}
 	
 	
 
