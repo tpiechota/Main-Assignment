@@ -1,5 +1,6 @@
 package Com.kylegoslin;
 
+import java.io.IOException;
 import java.util.logging.Level;
 
 public class StartUp {
@@ -17,6 +18,19 @@ public class StartUp {
 		//Test to be removed when finished
 		System.out.println(className);
 		System.out.println(packageName);
+		
+		
+		try {
+			
+			LogHandler.Configure();
+			
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+			
+			throw new RuntimeException("File could not be created!");
+			
+		}
 		
 		
 		// Set logger level and messages for each level
