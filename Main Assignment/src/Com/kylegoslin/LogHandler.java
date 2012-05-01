@@ -7,7 +7,6 @@ import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 import java.util.logging.XMLFormatter;
 
-
 public class LogHandler {
 	
 	//Create logger
@@ -40,12 +39,8 @@ public class LogHandler {
 		
 		// Add FileHandlers to Logger
 		logger.addHandler(txtFile);
-		logger.addHandler(xmlFile);
-		
-		
+		logger.addHandler(xmlFile);		
 
-	}
-	
-	
+	}	
 
 }
