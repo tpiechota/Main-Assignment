@@ -33,6 +33,10 @@ public class LogHandler {
 		// Create Formatters
 		txtFormatter = new SimpleFormatter();
 		xmlFormatter = new XMLFormatter();
+		
+		// Add Formatters to FileHandlers
+		txtFile.setFormatter(txtFormatter);
+		xmlFile.setFormatter(xmlFormatter);
 
 	}
 	
