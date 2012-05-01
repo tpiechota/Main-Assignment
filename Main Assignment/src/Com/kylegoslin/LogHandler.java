@@ -35,8 +35,9 @@ public class LogHandler {
 		// Assign converted epoch time to timeNow variable 
 		timeNow = nowFormatter.format(nowEpoch);
 		
-		//fileTxt = new FileHandler("Logging_" + time + ".txt");
-		//fileXML = new FileHandler("Logging_" + time + ".xml");
+		// to be uncommented when finished
+		//fileTxt = new FileHandler("Logging_" + timeNow + ".txt");
+		//fileXML = new FileHandler("Logging_" + timeNow + ".xml");
 		
 		// to be removed when finished
 		txtFile = new FileHandler("Logging.txt");
