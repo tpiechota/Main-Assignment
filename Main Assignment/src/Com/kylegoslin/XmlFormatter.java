@@ -26,12 +26,14 @@ public class XmlFormatter extends XMLFormatter {
 			for(int i = 0; i < m.length; i++){				
 				
 				sb.append("<record>\n");
+				
 				sb.append("<bugID>" + bugID + "</bugID>\n");
 				sb.append("<message>" + bugID + "</message>\n");
 				sb.append("<Time_Epoch)>" + bugID + "</Time_Epoch>\n");				
 				sb.append("<class>" + bugID + "</class>\n");
 				sb.append("<package>" + bugID + "</package>");
 				sb.append("<method>" + bugID + "</method>\n");
+				
 				sb.append("</record>\n");
 				
 				bugID++;
@@ -53,8 +55,8 @@ public class XmlFormatter extends XMLFormatter {
 	public String getHead(Handler h){
 		
 		return "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n"
-				+ "<!DOCTYPE log SYSTEM \"logger.dtd\">\n"
-				+ "<log>\n";
+			+ "<!DOCTYPE log SYSTEM \"logger.dtd\">\n"
+			+ "<log>\n";
 			
 	}
 
