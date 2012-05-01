@@ -34,7 +34,7 @@ public class XmlFormatter extends XMLFormatter {
 				sb.append("<message>" + formatMessage(record) + "</message>\n");
 				sb.append("<millis>" + record.getMillis() + "</millis>\n");				
 				sb.append("<messsageType>" + record.getLevel() + "</messsageType>\n");
-				//sb.append("<method>" + m[i].toString() + "</method>\n");
+				sb.append("<method>" + m[i].toString() + "</method>\n");
 				sb.append("<class>" + className.getClassName() + "</class>\n");
 				sb.append("<package>" + packageName.getPackageName() + "</package>\n");
 				sb.append("</record>\n");
@@ -44,8 +44,9 @@ public class XmlFormatter extends XMLFormatter {
 		 	}		
 			
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
+			
 		}
 
 		return sb.toString();
