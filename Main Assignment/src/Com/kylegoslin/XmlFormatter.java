@@ -28,8 +28,6 @@ public class XmlFormatter extends XMLFormatter {
 				sb.append("<bugID>" + bugID + "</bugID>\n");
 				sb.append("<message>" + bugID + "</message>\n");
 				sb.append("<Time_Epoch)>" + bugID + "</Time_Epoch>\n");				
-				sb.append("<logger>" + bugID + "</logger>\n");
-				sb.append("<messsageType>" + bugID + "</messsageType>\n");
 				sb.append("<class>" + bugID + "</class>\n");
 				sb.append("<package>" + bugID + "</package>");
 				sb.append("<method>" + bugID + "</method>\n");
