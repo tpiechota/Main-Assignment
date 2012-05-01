@@ -1,6 +1,7 @@
 package Com.kylegoslin;
 
 import java.lang.reflect.Method;
+import java.util.logging.Handler;
 import java.util.logging.LogRecord;
 import java.util.logging.XMLFormatter;
 
@@ -16,7 +17,7 @@ public class XmlFormatter extends XMLFormatter {
 		
 		try {			
 			
-			// Get methods from testing class using Reflections
+			// Get methods from testing class using Reflection
 			Class<?> myClass = Class.forName("ExampleUsage");
 			Method m[] = myClass.getDeclaredMethods();
 			
@@ -45,6 +46,24 @@ public class XmlFormatter extends XMLFormatter {
 		
 		return null;
 				
+	}
+	
+	
+	// This method is called just after the handler using this formatter is created
+	public String getHead(Handler h){
+		
+		return "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n"
+				+ "<!DOCTYPE log SYSTEM \"logger.dtd\">\n"
+				+ "<log>\n";
+			
+	}
+
+	
+	// This method is called just after the handler using this formatter is closed
+	public String getTail(Handler h){
+		
+		return "</log>\n";
+		
 	}
 
 }
