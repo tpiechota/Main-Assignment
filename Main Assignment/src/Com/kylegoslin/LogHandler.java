@@ -4,15 +4,12 @@ import java.io.IOException;
 import java.text.Format;
 import java.text.SimpleDateFormat;
 import java.util.logging.FileHandler;
+import java.util.logging.XMLFormatter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
-import java.util.logging.XMLFormatter;
 
 public class LogHandler {
-	
-	// Create logger
-	static Logger logger = Logger.getLogger("Com.kylegoslin");
 	
 	// Initialize FileHandlers
 	static private FileHandler txtFile;
@@ -22,12 +19,15 @@ public class LogHandler {
 	static private SimpleFormatter txtFormatter;
 	static private XMLFormatter xmlFormatter;
 	
+	// Create Logger
+	static Logger logger = Logger.getLogger("Com.kylegoslin");
+
 	// Date and Time
 	static long nowEpoch = System.currentTimeMillis();
 	static Format nowFormatter = new SimpleDateFormat("ddMMyyyyHHmmssz");
 	static String timeNow;
-	
-	static public void Configure() throws IOException {
+			
+	static public void Config() throws IOException {
 		
 		// Set logger level (global)
 		logger.setLevel(Level.INFO);
@@ -35,22 +35,23 @@ public class LogHandler {
 		// Assign converted epoch time to timeNow variable 
 		timeNow = nowFormatter.format(nowEpoch);
 		
-		// Create FileHandlers
-		txtFile = new FileHandler("Log_" + timeNow + ".txt");
-		xmlFile = new FileHandler("Log_" + timeNow + ".xml");
+		//fileTxt = new FileHandler("Logging_" + time + ".txt");
+		//fileXML = new FileHandler("Logging_" + time + ".xml");
 		
-		// Create Formatters
-		txtFormatter = new SimpleFormatter();
-		xmlFormatter = new XMLFormatter();
-		
-		// Add Formatters to FileHandlers
-		txtFile.setFormatter(txtFormatter);
-		xmlFile.setFormatter(xmlFormatter);
-		
-		// Add FileHandlers to Logger
-		logger.addHandler(txtFile);
-		logger.addHandler(xmlFile);	
-		
-	}	
+		// to be removed when finished
+		txtFile = new FileHandler("Logging.txt");
+		xmlFile = new FileHandler("Logging.xml");
 
+		// Create txt Formatter
+		txtFormatter = new SimpleFormatter();
+		txtFile.setFormatter(txtFormatter);
+		logger.addHandler(txtFile);
+
+		// Create XML Formatter
+		xmlFormatter = new XmlFormatter();
+		xmlFile.setFormatter(xmlFormatter);
+		logger.addHandler(xmlFile);
+
+	}
+	
 }
