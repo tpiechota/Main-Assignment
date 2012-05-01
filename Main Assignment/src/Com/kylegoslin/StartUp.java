@@ -18,4 +18,22 @@ public class StartUp {
 		
 	}
 	
+	
+	// Getters and Setters
+	public static String getClassName() {
+		return className;
+	}
+
+	public static void setClassName(String className) {
+		StartUp.className = className;
+	}
+
+	public static String getPackageName() {
+		return packageName;
+	}
+
+	public static void setPackageName(String packageName) {
+		StartUp.packageName = packageName;
+	}
+	
 }
