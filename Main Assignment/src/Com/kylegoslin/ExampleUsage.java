@@ -1,3 +1,5 @@
+package Com.kylegoslin;
+
 public class ExampleUsage {
 	
 	/***
@@ -8,9 +10,12 @@ public class ExampleUsage {
 	 * 
 	 ***/
 	
-	public ExampleUsage(){
-		
-		// Default Constructor
+	public ExampleUsage(){	
+
+		/*** Logger StartUp - BEGIN ***/
+		// This line has to be added to testing class for the Logger to work correctly!
+		StartUp.config(this.getClass().getName().toString(), this.getClass().getPackage().getName().toString());
+		/*** Logger StartUp - END ***/
 		
 	}
 	
