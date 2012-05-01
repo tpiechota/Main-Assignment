@@ -49,7 +49,8 @@ public class LogHandler {
 		
 		// Add FileHandlers to Logger
 		logger.addHandler(txtFile);
-		logger.addHandler(xmlFile);		
+		logger.addHandler(xmlFile);	
+		
 
 	}	
 
