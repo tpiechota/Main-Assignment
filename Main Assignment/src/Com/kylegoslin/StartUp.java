@@ -15,10 +15,6 @@ public class StartUp {
 		className = cn;
 		packageName = pn;
 		
-		//Test printout - to be removed when finished
-		System.out.println(className);
-		System.out.println(packageName);
-		
 		try {
 			
 			LogHandler.Config();
