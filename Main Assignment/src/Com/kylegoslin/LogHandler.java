@@ -43,16 +43,17 @@ public class LogHandler {
 		txtFile = new FileHandler("Logging.txt");
 		xmlFile = new FileHandler("Logging.xml");
 
-		// Create txt Formatter
+		// Create Formatters
 		txtFormatter = new SimpleFormatter();
-		txtFile.setFormatter(txtFormatter);
-		logger.addHandler(txtFile);
+		xmlFormatter = new XmlFormatter();	
 
-		// Create XML Formatter
-		xmlFormatter = new XmlFormatter();
+		// Add Formatters to handlers
 		xmlFile.setFormatter(xmlFormatter);
+		txtFile.setFormatter(txtFormatter);
+		
+		// Add handlers to logger
 		logger.addHandler(xmlFile);
-
+		logger.addHandler(txtFile);
 	}
 	
 }
