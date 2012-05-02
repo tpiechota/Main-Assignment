@@ -28,9 +28,12 @@ public class StartUp {
 		
 		// Set logger level and messages for each level
 		LogHandler.logger.setLevel(Level.ALL);
-		LogHandler.logger.severe("Severe Error Message");
+		LogHandler.logger.severe("Severe Message");
 		LogHandler.logger.warning("Warning Message");
-		LogHandler.logger.info("Error Message");
+		LogHandler.logger.info("Info Message");
+		LogHandler.logger.fine("Fine Message");
+		LogHandler.logger.finer("Finer Message");
+		LogHandler.logger.finest("Finest Message");
 		
 	}
 	
