@@ -68,3 +68,5 @@ b)	My Project
 			
 		}
 		...
+		
+  3. The log files will be saved
