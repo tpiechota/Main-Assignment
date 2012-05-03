@@ -82,7 +82,7 @@ public class XmlFormatter extends XMLFormatter {
 	
 	/**
 	* This method is called just after the handler using this formatter is closed
-	* @return "</log>" - closing tag of the xml log file
+	* @return Closing tag of the xml log file
 	*/	
 	public String getTail(Handler h){
 		
