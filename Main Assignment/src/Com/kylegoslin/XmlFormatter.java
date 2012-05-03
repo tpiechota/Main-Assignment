@@ -10,7 +10,7 @@ import java.util.logging.XMLFormatter;
 /**
  * <p>The XmlFormatter creates user defined xml fields that store log information provided by the logging application.</p>
  * 
- * <p>This is part of the error logging / warning tool that can be used with any application.</p>
+ * <p>This is part of the error logging / warning logging tool that can be used with any application.</p>
  * 
  * @author Tomasz Piechota
  * @version 0.1 Build 0001 May 03, 2012.
