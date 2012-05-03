@@ -6,14 +6,35 @@ Package Com.kylegoslin, provides the classes necessary to create the Logging Too
 
 Author: Tomasz Piechota
 
+CONTENT
+=======
+ - Developer Guide folder - developer guide
+ - doc folder - Javadoc
+ - Logging Tool:
+	+ package: Com.kylegoslin
+	+ class files:
+		* StartUp.java
+		* LogHandler.java 
+		* XmlFormatter.java
+		* package-info.java (part of Javadoc documentation containing information about the package)
+
+
+LICENCE
+=======
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
 INSTALLATION
 ============
- 1. Copy the whole package "Com.kylegoslin" with its content and paste it into your project folder. It will not work outside your java project folder containing classes which are to be tested using the logging tool.
- eg.:
+ I. Copy the whole package "Com.kylegoslin" with its contents and paste it into your project folder. It will not work outside your java project folder containing classes which are to be tested using the logging tool.
+ ex.:
  
  CORRECT:
  --------
 a)	My Project
+		|
 		|_src1
 		  |
 		  |_Com.kylegoslin
@@ -36,6 +57,7 @@ b)	My Project
  WRONG:
  ------
 	My Project_1
+		|
 		|_src
 		  |
 		  |_package1
@@ -43,18 +65,22 @@ b)	My Project
 		  |_package2
 
 	My Project_2
+		|
 		|_src
 		  |
 		  |_Com.kylegoslin
+		  
 
- 2. Copy this block of code at the beginning of you testing class "Constructor"
+ II. Copy this block of code at the beginning of you testing class "Constructor"
  
 	/*** Logger Initiator - BEGIN ***/
 	/* This line has to be added to testing class for the Logger to work correctly! */
 	Com.kylegoslin.StartUp.config(this.getClass().getName().toString(), this.getClass().getPackage().getName().toString());
 	/*** Logger Initiator - END ***/
+	
+	Important: If you paste this block of code into your "static void main" method you will get error and the logger won't work. You can't use this block of code in a static context!
 		
- eg.:
+ ex.:
 	public class ExampleUsage_1 {
 		...
 		public ExampleUsage_1(){	
@@ -69,4 +95,11 @@ b)	My Project
 		}
 		...
 		
-  3. The log files will be saved
+		
+ III. The log files will be saved in the project folder. Every log file is saved as a separate file. Name of each file contains date and time when the file was created. This way every file has a unique and meaningful name.
+	ex.:
+		Log_03052012204356GMT.txt -> Log_ date(dd-mm-yyyy) time(hh:mm:ss) zone(GMT) .txt
+		Log_03052012204356GMT.xml -> Log_ date(dd-mm-yyyy) time(hh:mm:ss) zone(GMT) .xml
+
+		
+ IV. Thank you for using my software. If you have any questions or you would like to report a problem, please do not hesitate and contact me via email: piechota.tomasz@gmail.com
