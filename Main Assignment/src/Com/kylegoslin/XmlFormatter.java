@@ -40,20 +40,22 @@ public class XmlFormatter extends XMLFormatter {
 			Class<?> myClass = Class.forName(className.getClassName());
 			Method m[] = myClass.getDeclaredMethods();
 			
-			for(int i = 0; i < m.length; i++){		 		   
+			bugID++;
+			
+			for(int i = 0; i < m.length; i++){
 				
 				sb.append("<record>\n");
 				sb.append("<bugId>" + bugID + "</bugId>\n");
 				sb.append("<message>" + formatMessage(record) + "</message>\n");
 				sb.append("<millis>" + record.getMillis() + "</millis>\n");				
-				sb.append("<messsageType>" + record.getLevel() + "</messsageType>\n");
+				sb.append("<level>" + record.getLevel() + "</level>\n");
 				sb.append("<method>" + m[i].toString() + "</method>\n");
 				sb.append("<class>" + className.getClassName() + "</class>\n");
 				sb.append("<package>" + packageName.getPackageName() + "</package>\n");
 				sb.append("</record>\n");
 				
-				bugID++;
-		 		   
+				
+	 		   
 		 	}		
 			
 		} catch (ClassNotFoundException e) {
