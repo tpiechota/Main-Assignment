@@ -29,7 +29,9 @@ public class XmlFormatter extends XMLFormatter {
 	StartUp className = new StartUp();
 	StartUp packageName = new StartUp();	
 	
-	// This method is called for every log records 
+	/**
+	* This method is called for every log records 
+	*/
 	public String format(LogRecord record) {
 		
 		try {			
@@ -65,7 +67,10 @@ public class XmlFormatter extends XMLFormatter {
 	}
 	
 	
-	// This method is called just after the handler using this formatter is created
+	/**
+	* This method is called just after the handler using this formatter is created
+	* @return Header of the xml log file
+	*/	
 	public String getHead(Handler h){
 		
 		return "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n"
@@ -75,7 +80,10 @@ public class XmlFormatter extends XMLFormatter {
 	}
 
 	
-	// This method is called just after the handler using this formatter is closed
+	/**
+	* This method is called just after the handler using this formatter is closed
+	* @return "</log>\n" - closing tag of the xml log file
+	*/	
 	public String getTail(Handler h){
 		
 		return "</log>\n";
