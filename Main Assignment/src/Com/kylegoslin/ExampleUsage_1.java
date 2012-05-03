@@ -1,14 +1,20 @@
 package Com.kylegoslin;
 
+
+/**
+ *
+ * Example usage tests the logger applied to it.
+ *
+ * Author: Tomasz Piechota 
+ * Project: Java - Semester 4 - Main Assignment
+ * 
+ */
 public class ExampleUsage_1 {
 	
-	/***
-	 * 
-	 * Author: Tomasz Piechota 
-	 * Project: Java - Semester 4 - Main Assignment
-	 * 
-	 ***/
-	
+	/**
+	* Default constructor.
+	* This is where Logger Initiator has to be pasted into.
+	*/
 	public ExampleUsage_1(){	
 
 		/*** Logger Initiator - BEGIN *****************************************************/
@@ -20,12 +26,18 @@ public class ExampleUsage_1 {
 		
 	}
 	
+	/**
+	* Prints out "Hello World!" to the console.
+	*/
 	public void exampleMethod(){
 		
 		System.out.println("Hello World!");
 		
 	}
 	
+	/**
+	* Main
+	*/
 	public static void main (String [] args){
 		
 		new ExampleUsage_1(); // Main
