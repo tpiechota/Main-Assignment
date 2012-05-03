@@ -1,18 +1,29 @@
 package Com.kylegoslin;
 
-	import java.io.BufferedReader;
+import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.logging.Level;
 
+/***
+*
+* Example usage tests the logger applied to it.
+*
+* Author: Tomasz Piechota 
+* Project: Java - Semester 4 - Main Assignment
+* 
+*/
 public class ExampleUsage_2 {
 	
 	boolean testOK;
 	boolean isNumber;
 	String fName;
 
-
 	BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 	
+	/**
+	* Default constructor.
+	* This is where Logger Initiator has to be pasted into.
+	*/	
 	public ExampleUsage_2(){
 		
 		/*** Logger StartUp - BEGIN ***/
@@ -41,7 +52,9 @@ public class ExampleUsage_2 {
 		
 	}
 	
-	// Just a simple User input command
+	/**
+	* Simple prompt asking for user name and tests user input. Logs messages and errors if occur.
+	*/
 	public void enterName(){
 		
 		do{// First Name BEGIN.
@@ -118,6 +131,9 @@ public class ExampleUsage_2 {
 		
 	}
 	
+	/**
+	* main
+	*/
 	public static void main (String [] args){
 
 		new ExampleUsage_2();
