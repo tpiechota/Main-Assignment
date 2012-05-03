@@ -1,10 +1,21 @@
 package Com.kylegoslin;
 
+
 import java.lang.reflect.Method;
 import java.util.logging.Handler;
 import java.util.logging.LogRecord;
 import java.util.logging.XMLFormatter;
 
+
+/**
+ * <p>The XmlFormatter creates user defined xml fields that store log information provided by the logging application.</p>
+ * 
+ * <p>This is part of the error logging / warning tool that can be used with any application.</p>
+ * 
+ * @author Tomasz Piechota
+ * @version 0.1 Build 0001 May 03, 2012.
+ *
+ */
 public class XmlFormatter extends XMLFormatter {
 
 	// Create StringBuffer
