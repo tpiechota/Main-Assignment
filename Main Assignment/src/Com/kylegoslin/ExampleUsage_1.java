@@ -17,10 +17,10 @@ public class ExampleUsage_1 {
 	*/
 	public ExampleUsage_1(){	
 
-		/*** Logger Initiator - BEGIN *****************************************************/
+		/*** Logger Initiator - BEGIN ***/
 		/* This line has to be added to testing class for the Logger to work correctly! */
 		Com.kylegoslin.StartUp.config(this.getClass().getName().toString(), this.getClass().getPackage().getName().toString());
-		/*** Logger Initiator - END *******************************************************/
+		/*** Logger Initiator - END ***/
 		
 		exampleMethod();
 		
