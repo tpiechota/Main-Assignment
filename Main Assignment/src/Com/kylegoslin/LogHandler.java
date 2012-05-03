@@ -39,7 +39,11 @@ public class LogHandler {
 	static long nowEpoch = System.currentTimeMillis();
 	static Format nowFormatter = new SimpleDateFormat("ddMMyyyyHHmmssz");
 	static String timeNow;
-			
+		
+	/**
+	* Sets logger level. Creates logger, FileHandlers and formatters. Converts
+	* epoch to a readable format and applies it to the log file name to distinguish each log file.
+	*/
 	static public void Config() throws IOException {
 		
 		// Set logger level (global)
