@@ -62,7 +62,8 @@ public class LogHandler {
 
 		// Add Formatters to handlers
 		txtFile.setFormatter(txtFormatter);
-		xmlFile.setFormatter(xmlFormatter);
+		//xmlFile.setFormatter(xmlFormatter);
+		xmlFile.setFormatter(new XMLFormatter());
 
 		// Add handlers to logger
 		logger.addHandler(txtFile);
