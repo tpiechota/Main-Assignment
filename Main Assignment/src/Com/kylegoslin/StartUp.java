@@ -3,6 +3,13 @@ package Com.kylegoslin;
 import java.io.IOException;
 import java.util.logging.Level;
 
+/**
+ * <p>This is part of the error logging / warning tool that can be used with any application.</p>
+ * <p>The StartUp class starts up / initializes logging application.</p>
+ * @author Tomasz Piechota
+ * @version 0.1 Build 0001 May 03, 2012.
+ *
+ */
 public class StartUp {
 	
 	// Variables
