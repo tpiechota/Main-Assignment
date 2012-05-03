@@ -1,5 +1,6 @@
 package Com.kylegoslin;
 
+
 import java.io.IOException;
 import java.text.Format;
 import java.text.SimpleDateFormat;
@@ -9,6 +10,18 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
+
+/**
+ * <p>The LogHandler class creates logger, FileHandlers and formatters.<br />
+ * It also sets logger level and converts epoch time to human readable<br />
+ * version that is used to name each log file that is being created.</p>
+ * 
+ * <p>This is part of the error logging / warning tool that can be used with any application.</p>
+ * 
+ * @author Tomasz Piechota
+ * @version 0.1 Build 0001 May 03, 2012.
+ *
+ */
 public class LogHandler {
 	
 	// Initialize FileHandlers
