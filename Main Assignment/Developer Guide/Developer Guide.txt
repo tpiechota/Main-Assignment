@@ -6,8 +6,16 @@ Package Com.kylegoslin, provides the classes necessary to create the Logging Too
 
 Author: Tomasz Piechota
 
-CONTENT
-=======
+
+I. LICENCE
+==========
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+II. CONTENT
+===========
  - Developer Guide folder - developer guide
  - doc folder - Javadoc
  - Logging Tool:
@@ -19,16 +27,9 @@ CONTENT
 		* package-info.java (part of Javadoc documentation containing information about the package)
 
 
-LICENCE
-=======
-This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-
-INSTALLATION
-============
- I. Copy the whole package "Com.kylegoslin" with its contents and paste it into your project folder. It will not work outside your java project folder containing classes which are to be tested using the logging tool.
+III. INSTALLATION
+=================
+ 1. Copy the whole package "Com.kylegoslin" with its contents and paste it into your project folder. It will not work outside your java project folder containing classes which are to be tested using the logging tool.
  ex.:
  
  CORRECT:
@@ -71,7 +72,7 @@ b)	My Project
 		  |_Com.kylegoslin
 		  
 
- II. Copy this block of code at the beginning of you testing class "Constructor"
+ 2. Copy this block of code at the beginning of you testing class "Constructor"
  
 	/*** Logger Initiator - BEGIN ***/
 	/* This line has to be added to testing class for the Logger to work correctly! */
@@ -96,10 +97,24 @@ b)	My Project
 		...
 		
 		
- III. The log files will be saved in the project folder. Every log file is saved as a separate file. Name of each file contains date and time when the file was created. This way every file has a unique and meaningful name.
+IV. OTHER INFORMATION
+=====================
+ 1. Log files are saved in the project folder. Every log file is saved as a separate file. Name of each file contains date and time when the file was created. This way every file has a unique and meaningful name.
 	ex.:
 		Log_03052012204356GMT.txt -> Log_ date(dd-mm-yyyy) time(hh:mm:ss) zone(GMT) .txt
 		Log_03052012204356GMT.xml -> Log_ date(dd-mm-yyyy) time(hh:mm:ss) zone(GMT) .xml
 
 		
- IV. Thank you for using my software. If you have any questions or you would like to report a problem, please do not hesitate and contact me via email: piechota.tomasz@gmail.com
+ 2. Logger records messages containing information:
+		- bugId
+		- message: 
+		- millis: time in milliseconds (epoch time)
+		- level: message level (SEVERE, WARNING, INFO, etc.)
+		- method: method name
+		- class: class name
+		- package: package name
+		
+ 
+ V. THANK YOU
+ ============
+ Thank you for using my software. If you have any questions or you would like to report a problem, please do not hesitate and contact me via email: piechota.tomasz@gmail.com
