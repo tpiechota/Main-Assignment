@@ -1,0 +1,70 @@
+Error Logging / Warning Logging Tool
+
+Advanced Programming - Main Assignment
+
+Package Com.kylegoslin, provides the classes necessary to create the Logging Tool, that can be used with other applications.
+
+Author: Tomasz Piechota
+
+INSTALLATION
+============
+ 1. Copy the whole package "Com.kylegoslin" with its content and paste it into your project folder. It will not work outside your java project folder containing classes which are to be tested using the logging tool.
+ eg.:
+ 
+ CORRECT:
+ --------
+a)	My Project
+		|_src1
+		  |
+		  |_Com.kylegoslin
+		  |
+		  |_package1
+		  |
+		  |_package2
+
+b)	My Project
+		|
+		|_src1
+		| |_package1
+		|
+		|_src2
+		| |_package2
+		|
+		|_src3
+		  |_Com.kylegoslin
+			
+ WRONG:
+ ------
+	My Project_1
+		|_src
+		  |
+		  |_package1
+		  |
+		  |_package2
+
+	My Project_2
+		|_src
+		  |
+		  |_Com.kylegoslin
+
+ 2. Copy this block of code at the beginning of you testing class "Constructor"
+ 
+	/*** Logger Initiator - BEGIN ***/
+	/* This line has to be added to testing class for the Logger to work correctly! */
+	Com.kylegoslin.StartUp.config(this.getClass().getName().toString(), this.getClass().getPackage().getName().toString());
+	/*** Logger Initiator - END ***/
+		
+ eg.:
+	public class ExampleUsage_1 {
+		...
+		public ExampleUsage_1(){	
+
+			/*** Logger Initiator - BEGIN ***/
+			/* This line has to be added to testing class for the Logger to work correctly! */
+			Com.kylegoslin.StartUp.config(this.getClass().getName().toString(), this.getClass().getPackage().getName().toString());
+			/*** Logger Initiator - END ***/
+			
+			exampleMethod();
+			
+		}
+		...
